@@ -7,14 +7,13 @@ body{
   font-family: Arial, sans-serif;
   text-align:center;
 
-  /* Less white wash + zoom OUT feel */
+  /* Full screen background + visible buildings */
   background:
-    linear-gradient(rgba(255,255,255,.16), rgba(255,255,255,.32)),
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.24)),
     url("./nola-bg.png");
 
-  /* KEY: below 100% = zooms OUT */
-  background-size: 88%;
-  background-position: center 12%;
+  background-size: cover;
+  background-position: center 15%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
