@@ -27,9 +27,7 @@ body{
   padding: 16px 14px 30px;
 }
 
-.hero{
-  padding-top: 6px;
-}
+.hero{ padding-top: 6px; }
 
 .logo{
   width:82%;
@@ -39,6 +37,7 @@ body{
   margin: 0 auto;
   filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
+
 /* The small CALL NOW that sits on/near the float */
 .floatButton{
   margin-top: -72px;
@@ -61,14 +60,10 @@ body{
   box-shadow: 0 10px 25px rgba(0,0,0,.22);
 }
 
-.callButtonSmall span{
-  font-size: 20px;
-}
+.callButtonSmall span{ font-size: 20px; }
 
 /* Big centered CALL NOW button */
-.callButtonBigWrap{
-  margin: 10px 0 18px;
-}
+.callButtonBigWrap{ margin: 10px 0 18px; }
 
 .callButtonBig{
   display:inline-flex;
@@ -97,7 +92,6 @@ body{
 }
 
 .callButtonBig::after{
-  /* subtle shine strip like the goal style */
   content:"";
   position:absolute;
   top:6px;
@@ -139,7 +133,7 @@ body{
 .serviceBox{
   background: rgba(255,255,255,.82);
   border-radius: 14px;
-  padding: 14px 14px 14px 14px;
+  padding: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,.10);
   text-align:left;
   display:flex;
@@ -174,9 +168,7 @@ body{
 }
 
 /* Areas section */
-.areas{
-  margin-top: 18px;
-}
+.areas{ margin-top: 18px; }
 
 .areas h2{
   font-size: 32px;
@@ -212,10 +204,7 @@ body{
 
 /* Mobile */
 @media (max-width: 560px){
-
-  .serviceGrid{
-    grid-template-columns: 1fr;
-  }
+  .serviceGrid{ grid-template-columns: 1fr; }
 
   .callButtonBig{
     min-width: 300px;
@@ -223,12 +212,5 @@ body{
     font-size: 24px;
   }
 
-  .services h2{
-    font-size: 32px;
-  }
-
-}
-  .serviceGrid{ grid-template-columns: 1fr; }
-  .callButtonBig{ font-size: 24px; padding: 16px 46px; }
   .services h2{ font-size: 32px; }
 }
