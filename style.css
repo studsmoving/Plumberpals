@@ -32,14 +32,13 @@ body{
 }
 
 .logo{
-  width:75%;
-  max-width:420px;
+  width:82%;
+  max-width:460px;
   height:auto;
   display:block;
   margin: 0 auto;
   filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
-
 /* The small CALL NOW that sits on/near the float */
 .floatButton{
   margin-top: -72px;
