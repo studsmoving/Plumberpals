@@ -7,12 +7,13 @@ body{
   font-family: Arial, sans-serif;
   text-align:center;
 
-  /* background image + soft white overlay like your goal screenshot */
   background:
-linear-gradient(rgba(255,255,255,.15), rgba(255,255,255,.35)),
-url("./nola-bg.png");
-  background-size: cover;
-  background-position: center;
+  linear-gradient(rgba(255,255,255,.35),
+  rgba(255,255,255,.55)),
+  url("./nola-bg.png");
+
+  background-size: 115%;   /* zoom OUT */
+  background-position: center top; /* show both buildings */
   background-repeat: no-repeat;
   background-attachment: fixed;
 
