@@ -11,9 +11,19 @@ url("nola-bg.png");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
-}
-  background-position: center;
-  background-attachment: fixed;
+body {
+margin:0;
+font-family:Arial;
+text-align:center;
+
+background:
+linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.85)),
+url("nola-bg.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 }
 
 .hero{
