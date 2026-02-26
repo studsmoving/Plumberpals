@@ -1,23 +1,37 @@
-/* Plumber Pals - Mobile-first */
+/* =========================================================
+   Plumber Pals - FINAL (pixel-tight mobile-first)
+   Files expected in SAME folder as index.html:
+   - style.css
+   - logo.png
+   - nola-bg.png
+   ========================================================= */
 
 *{ box-sizing:border-box; }
+
+:root{
+  --purple:#5b1b77;
+  --gold:#d9b200;
+  --gold2:#f2cf4a;
+  --green1:#1aa02a;
+  --green2:#0f7a16;
+}
+
+html, body{ height:100%; }
 
 body{
   margin:0;
   font-family: Arial, sans-serif;
   text-align:center;
-
-  /* FINAL balanced background */
-  background:
-    linear-gradient(rgba(255,255,255,.05), rgba(255,255,255,.18)),
-    url("./nola-bg.png");
-
-  background-size: cover;
-  background-position: center 10%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
   color:#111;
+
+  /* Background: show the houses clearly + “zoomed out” feel */
+  background-image:
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.28)),
+    url("./nola-bg.png");
+  background-repeat: no-repeat;
+  background-position: center 12%;
+  background-size: cover;              /* fills screen */
+  background-attachment: fixed;
 }
 
 .container{
@@ -26,43 +40,25 @@ body{
   padding: 16px 14px 30px;
 }
 
+/* HERO */
 .hero{ padding-top: 6px; }
 
 .logo{
-  width:82%;
-  max-width:460px;
+  width: 78%;                /* smaller like goal */
+  max-width: 440px;
   height:auto;
   display:block;
   margin: 0 auto;
   filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
 
-/* The small CALL NOW that sits on/near the float */
-.floatButton{
-  margin-top: -72px;
-  margin-bottom: 18px;
+/* REMOVE the extra “float” button area (keep only the printed button inside the image) */
+.floatButton{ display:none; }
+
+/* BIG CALL BUTTON (regal / gold / slim) */
+.callButtonBigWrap{
+  margin: 10px 0 18px;
 }
-
-.callButtonSmall{
-  background: #148a19;
-  color: #fff;
-  padding: 14px 34px;
-  border-radius: 999px;
-  font-size: 20px;
-  font-weight: 800;
-  text-decoration: none;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  justify-content:center;
-  border: 3px solid #d9b200;
-  box-shadow: 0 10px 25px rgba(0,0,0,.22);
-}
-
-.callButtonSmall span{ font-size: 20px; }
-
-/* Big centered CALL NOW button */
-.callButtonBigWrap{ margin: 10px 0 18px; }
 
 .callButtonBig{
   display:inline-flex;
@@ -70,32 +66,25 @@ body{
   justify-content:center;
   gap: 12px;
 
-  padding: 14px 78px;
-  min-width: 320px;
+  min-width: 330px;
+  padding: 13px 84px;        /* slimmer + longer */
   border-radius: 999px;
 
-  background: linear-gradient(#1aa02a,#0f7a16);
-
-  /* GOLD TEXT */
-  color:#ffd84a;
-
-  font-size:26px;
-  font-weight:900;
+  background: linear-gradient(var(--green1), var(--green2));
+  color: var(--gold2);       /* gold text */
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: .5px;
   text-decoration:none;
 
-  border:4px solid #d9b200;
-
+  border: 4px solid var(--gold);
   box-shadow:
     0 14px 26px rgba(0,0,0,.22),
-    inset 0 2px 0 rgba(255,255,255,.25),
-    inset 0 -3px 0 rgba(0,0,0,.25);
+    inset 0 2px 0 rgba(255,255,255,.35),
+    inset 0 -3px 0 rgba(0,0,0,.18);
 
-  /* GOLD GLOW */
-  text-shadow:
-    0 2px 0 rgba(0,0,0,.35),
-    0 0 6px rgba(255,215,0,.35);
-
-  position:relative;
+  position: relative;
+  overflow:hidden;
 }
 
 .callButtonBig::after{
@@ -112,11 +101,21 @@ body{
 
 .callButtonBig .phone{
   font-size: 24px;
-  filter: drop-shadow(0 2px 0 rgba(0,0,0,.25));
+  color: var(--gold2);
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.22));
+}
+
+/* SERVICES CARD */
+.services{
+  margin-top: 6px;
+  padding: 22px 16px 18px;
+  background: rgba(255,255,255,.90);
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
 }
 
 .services h2{
-  color: #5b1b77;
+  color: var(--purple);
   font-size: 34px;
   margin: 0 0 8px 0;
   font-weight: 900;
@@ -130,6 +129,7 @@ body{
   font-size: 20px;
 }
 
+/* GRID = 2 columns on mobile like goal */
 .serviceGrid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -161,7 +161,7 @@ body{
 }
 
 .serviceText h4{
-  color:#5b1b77;
+  color: var(--purple);
   margin: 0 0 4px 0;
   font-size: 18px;
   font-weight: 900;
@@ -174,7 +174,7 @@ body{
   font-size: 15px;
 }
 
-/* Areas section */
+/* AREAS */
 .areas{ margin-top: 18px; }
 
 .areas h2{
@@ -200,7 +200,7 @@ body{
 .numberBig{
   font-size: 34px;
   font-weight: 900;
-  color: #5b1b77;
+  color: var(--purple);
 }
 
 .numberSmall{
@@ -209,27 +209,22 @@ body{
   color:#222;
 }
 
-/* Mobile */
+/* Responsive tweaks */
 @media (max-width: 560px){
-  .serviceGrid{
-    grid-template-columns: 1fr 1fr;   /* keep grid on phones */
-    gap: 12px;
-  }
-
+  /* keep 2-col grid on most phones; only go 1-col on very small screens */
   .callButtonBig{
     min-width: 300px;
-    padding: 14px 72px;
+    padding: 13px 72px;
     font-size: 24px;
   }
-
-  .services h2{
-    font-size: 32px;
-  }
+  .services h2{ font-size: 32px; }
 }
 
-/* Super small phones */
 @media (max-width: 380px){
-  .serviceGrid{
-    grid-template-columns: 1fr;       /* only then go ladder */
+  .serviceGrid{ grid-template-columns: 1fr; }
+  .callButtonBig{
+    min-width: 270px;
+    padding: 12px 56px;
+    font-size: 22px;
   }
 }
