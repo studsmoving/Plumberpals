@@ -104,9 +104,8 @@ body{
   letter-spacing:1px;
 }
 .callButtonBig .phone{
-  font-size: 26px;
+font-size:22px;
 }
-
 /* Services Card */
 .services{
   margin-top: 6px;
