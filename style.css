@@ -67,52 +67,51 @@ body{
 
 /* Big centered CALL NOW button */
 .callButtonBigWrap{
-  margin: 12px 0 18px;
+  margin: 10px 0 18px;
 }
 
 .callButtonBig{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:14px;
+  gap: 12px;
 
-  background: linear-gradient(
-    to bottom,
-    #2fae3b 0%,
-    #1e8e2f 50%,
-    #126b22 100%
-  );
+  /* slimmer + longer like goal */
+  padding: 14px 78px;
+  min-width: 320px;
+  border-radius: 999px;
 
-  color:white;
-
-  /* THIS makes it long and skinny */
-  padding:14px 95px;
-
-  border-radius:999px;
-
-  font-size:28px;
-  font-weight:900;
-
+  /* regal look */
+  background: linear-gradient(#1aa02a, #0f7a16);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
   text-decoration:none;
 
-  border:4px solid #e0b400;
-
+  border: 4px solid #d9b200;
   box-shadow:
-    0 14px 35px rgba(0,0,0,.28),
-    inset 0 3px 6px rgba(255,255,255,.25);
+    0 14px 26px rgba(0,0,0,.22),
+    inset 0 2px 0 rgba(255,255,255,.35),
+    inset 0 -3px 0 rgba(0,0,0,.18);
+  position: relative;
+}
 
-  letter-spacing:1px;
+.callButtonBig::after{
+  /* subtle shine strip like the goal style */
+  content:"";
+  position:absolute;
+  top:6px;
+  left:10px;
+  right:10px;
+  height:45%;
+  border-radius:999px;
+  background: linear-gradient(rgba(255,255,255,.28), rgba(255,255,255,0));
+  pointer-events:none;
 }
+
 .callButtonBig .phone{
-font-size:22px;
-}
-/* Services Card */
-.services{
-  margin-top: 6px;
-  padding: 22px 16px 18px;
-  background: rgba(255,255,255,.90);
-  border-radius: 22px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  font-size: 24px;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.25));
 }
 
 .services h2{
