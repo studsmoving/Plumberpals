@@ -31,13 +31,12 @@ body{
   padding: 10px 14px 30px;
 }
 
-/* HERO: push logo DOWN to the “street” */
 .hero{
-  min-height: 52vh;              /* controls how low the cart sits */
+  min-height: 62vh;
   display:flex;
-  align-items:flex-end;          /* bottom of hero */
+  align-items:flex-end;
   justify-content:center;
-  padding: 0 0 6px;              /* tiny bottom padding */
+  padding-bottom: 4px;
 }
 
 .logo{
