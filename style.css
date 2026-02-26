@@ -1,13 +1,150 @@
 body{
   margin:0;
-  font-family:Arial;
+  font-family: Arial, Helvetica, sans-serif;
   text-align:center;
-
-  /* This is the “looks like that” background */
   background:
-    linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.95)),
+    linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.95)),
     url("assets/nola-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero{
+  padding:20px;
+}
+
+.logo{
+  width:95%;
+  max-width:700px;
+  height:auto;
+}
+
+.floatButton{
+  margin-top:-70px;
+  margin-bottom:20px;
+}
+
+.callButtonSmall{
+  background: #148a19;
+  color: white;
+  padding:14px 28px;
+  border-radius:40px;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-block;
+  border:3px solid gold;
+  box-shadow:0px 6px 20px rgba(0,0,0,.25);
+}
+
+.callButtonBig{
+  display:inline-block;
+  margin-top:20px;
+  background:#148a19;
+  color:white;
+  padding:18px 60px;
+  border-radius:50px;
+  font-size:28px;
+  font-weight:bold;
+  text-decoration:none;
+  border:3px solid gold;
+  box-shadow:0px 10px 25px rgba(0,0,0,.25);
+}
+
+.services{
+  margin-top:20px;
+  padding:20px;
+  background:white;
+  border-radius:20px;
+  margin-left:10px;
+  margin-right:10px;
+  box-shadow:0px 10px 30px rgba(0,0,0,.18);
+}
+
+.services h2{
+  color: purple;
+  font-size:28px;
+  margin:0 0 6px 0;
+}
+
+.services h3{
+  color: gray;
+  margin:0 0 18px 0;
+  font-weight:600;
+}
+
+.serviceGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+.serviceBox{
+  background:#f6f6f6;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0px 3px 10px rgba(0,0,0,.08);
+}
+
+.serviceBox h4{
+  color: purple;
+  margin:0 0 6px 0;
+  font-size:18px;
+}
+
+.serviceBox p{
+  margin:0;
+  color:#333;
+  line-height:1.35;
+}
+
+.areas{
+  margin-top:20px;
+  padding:10px 16px;
+  font-size:20px;
+}
+
+.areas h2{
+  margin:0 0 10px 0;
+  font-size:34px;
+  font-weight:800;
+}
+
+.areasList{
+  font-size:18px;
+  color:#111;
+  padding:0 10px;
+  line-height:1.4;
+}
+
+.footerCall{
+  margin-top:18px;
+  padding:20px;
+}
+
+.numberBig{
+  font-size:32px;
+  font-weight:bold;
+  color: purple;
+}
+
+.numberSmall{
+  font-size:20px;
+  margin-top:5px;
+  color:#222;
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  .serviceGrid{
+    grid-template-columns: 1fr;
+  }
+  .callButtonBig{
+    font-size:24px;
+    padding:16px 46px;
+  }
+  .areas h2{
+    font-size:30px;
+  }
 }
