@@ -204,7 +204,10 @@ body{
 
 /* Mobile */
 @media (max-width: 560px){
-  .serviceGrid{ grid-template-columns: 1fr; }
+  .serviceGrid{
+    grid-template-columns: 1fr 1fr;   /* keep grid on phones */
+    gap: 12px;
+  }
 
   .callButtonBig{
     min-width: 300px;
@@ -212,5 +215,14 @@ body{
     font-size: 24px;
   }
 
-  .services h2{ font-size: 32px; }
+  .services h2{
+    font-size: 32px;
+  }
+}
+
+/* Super small phones */
+@media (max-width: 380px){
+  .serviceGrid{
+    grid-template-columns: 1fr;       /* only then go ladder */
+  }
 }
