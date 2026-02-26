@@ -70,24 +70,32 @@ body{
   justify-content:center;
   gap: 12px;
 
-  /* slimmer + longer like goal */
   padding: 14px 78px;
   min-width: 320px;
   border-radius: 999px;
 
-  /* regal look */
-  background: linear-gradient(#1aa02a, #0f7a16);
-  color: #fff;
-  font-size: 26px;
-  font-weight: 900;
+  background: linear-gradient(#1aa02a,#0f7a16);
+
+  /* GOLD TEXT */
+  color:#ffd84a;
+
+  font-size:26px;
+  font-weight:900;
   text-decoration:none;
 
-  border: 4px solid #d9b200;
+  border:4px solid #d9b200;
+
   box-shadow:
     0 14px 26px rgba(0,0,0,.22),
-    inset 0 2px 0 rgba(255,255,255,.35),
-    inset 0 -3px 0 rgba(0,0,0,.18);
-  position: relative;
+    inset 0 2px 0 rgba(255,255,255,.25),
+    inset 0 -3px 0 rgba(0,0,0,.25);
+
+  /* GOLD GLOW */
+  text-shadow:
+    0 2px 0 rgba(0,0,0,.35),
+    0 0 6px rgba(255,215,0,.35);
+
+  position:relative;
 }
 
 .callButtonBig::after{
