@@ -1,223 +1,327 @@
-/* Plumber Pals - Full Background + Only Service Boxes White */
+/* FINAL CLEAN VERSION */
 
-*{ box-sizing:border-box; }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
+/* Full page height */
 html, body{
-  height:100%;
-  margin:0;
-  padding:0;
+height:100%;
 }
 
+/* BACKGROUND — FULL TOP TO BOTTOM */
 body{
-  margin:0;
-  padding:0;
-  font-family: Arial, sans-serif;
-  text-align:center;
-  color:#111;
 
-  /* Full page background */
-  background:
-    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
-    url("./nola-bg.png");
+font-family:Arial, sans-serif;
+text-align:center;
+color:#111;
 
-  /* Zoomed out so both houses are visible */
-  background-size:120% auto;
+/* Full background image */
+background:
+linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
+url("./nola-bg.png");
 
-  /* Adjust framing */
-  background-position:center 70%;
+/* Taller background */
+background-size:120% auto;
 
-  background-repeat:no-repeat;
+/* Moves image upward to remove black gap */
+background-position:center 55%;
 
-  /* Critical: makes bg fill while scrolling */
-  background-attachment:scroll;
+background-repeat:no-repeat;
 
-  overflow-x:hidden;
+/* Makes background fill entire scroll */
+background-attachment:scroll;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
 }
 
-/* Keep content centered without adding white panels */
+
+/* CONTAINER */
+
 .container{
-  max-width:820px;
-  margin:0 auto;
-  padding:0 14px 34px;  /* no top padding = removes top gap */
+
+max-width:820px;
+margin:0 auto;
+
+/* No top padding = removes top gap */
+padding:0 14px 10px;
+
 }
+
+
 
 /* HERO */
+
 .hero{
-  min-height:72vh;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  padding:0;
-  margin:0;
-  padding-bottom:10px;
+
+min-height:66vh;
+
+display:flex;
+align-items:flex-end;
+justify-content:center;
+
+padding-bottom:6px;
+
+margin:0;
+
 }
 
-/* FLOAT / LOGO */
+
+/* FLOAT */
+
 .logo{
-  width:92%;
-  max-width:600px;
-  height:auto;
-  display:block;
 
-  /* Move it up/down here */
-  margin:0 auto -10px auto;
+width:94%;
+max-width:640px;
 
-  filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
+margin:0 auto -6px auto;
+
+height:auto;
+
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
+
 }
 
-/* ✅ Remove big button (you said redundant) */
+
+/* Remove extra button */
+
 .callButtonBigWrap{
-  display:none !important;
+display:none;
 }
 
-/* SERVICES SECTION (transparent so background shows through) */
+
+
+/* SERVICES SECTION — TRANSPARENT */
+
 .services{
-  margin-top:6px;
-  padding:8px 6px 0;
-  background:transparent !important;
-  border-radius:0;
-  box-shadow:none;
+
+background:transparent;
+
+margin-top:6px;
+
+padding:6px 4px;
+
 }
 
-/* Titles with color restored */
+
+
+/* Titles */
+
 .servicesTitle{
-  color:#5b1b77;
-  font-size:28px;
-  margin:0 0 6px 0;
-  font-weight:900;
-  line-height:1.05;
-  white-space:nowrap;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+color:#5b1b77;
+
+font-size:26px;
+
+font-weight:900;
+
+margin-bottom:4px;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
+
 
 .services h3{
-  color:#6b6b6b;
-  margin:0 0 12px 0;
-  font-weight:700;
-  font-size:18px;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+color:#6b6b6b;
+
+font-size:18px;
+
+margin-bottom:8px;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
 
-/* 2x2 grid */
+
+
+/* GRID */
+
 .serviceGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-  margin-top:10px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
 }
 
-/* ✅ Only these boxes are white/glassy */
+
+
+/* SERVICE BOXES — SMALLER RECTANGLES */
+
 .serviceBox{
-  background: rgba(255,255,255,.92);
-  border-radius:14px;
-  padding:12px 12px;
-  box-shadow:0 10px 26px rgba(0,0,0,.14);
 
-  text-align:left;
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
+background:white;
 
-  /* More rectangular and less tall */
-  min-height:124px;
+border-radius:12px;
+
+/* Smaller padding */
+padding:10px;
+
+/* Smaller height */
+min-height:95px;
+
+box-shadow:
+0 6px 16px rgba(0,0,0,.15);
+
+display:flex;
+
+gap:8px;
+
+align-items:flex-start;
+
+text-align:left;
+
 }
 
-/* Smaller icon badge */
+
+
+/* ICON */
+
 .icon{
-  width:38px;
-  height:38px;
-  flex:0 0 38px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+width:30px;
+height:30px;
 
-  border-radius:10px;
-  background: rgba(255,255,255,.92);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
-  font-size:18px;
+flex:0 0 30px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:16px;
+
+border-radius:8px;
+
+background:#f6f6f6;
+
 }
 
-/* Text */
+
+
+/* TEXT */
+
 .serviceText h4{
-  color:#5b1b77;
-  margin:0 0 4px 0;
-  font-size:17px;
-  font-weight:900;
-  line-height:1.05;
+
+color:#5b1b77;
+
+font-size:16px;
+
+margin-bottom:2px;
+
+line-height:1.1;
+
 }
+
 
 .serviceText p{
-  margin:0;
-  color:#333;
-  line-height:1.2;
-  font-size:14px;
+
+font-size:13px;
+
+color:#333;
+
+line-height:1.2;
+
 }
 
-/* Areas */
+
+
+/* AREAS */
+
 .areas{
-  margin-top:18px;
+
+margin-top:14px;
+
 }
+
 
 .areas h2{
-  font-size:30px;
-  font-weight:900;
-  margin:0 0 10px 0;
-  color:#2e2e2e;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+font-size:26px;
+
+color:#2e2e2e;
+
+margin-bottom:6px;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
+
 
 .areasList{
-  font-size:18px;
-  color:#1a1a1a;
-  line-height:1.4;
-  padding:0 6px;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+font-size:16px;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
 
-/* Footer numbers */
+
+
+/* FOOTER */
+
 .footerCall{
-  margin-top:16px;
-  padding:8px 0 0;
+
+margin-top:10px;
+
 }
+
 
 .numberBig{
-  font-size:32px;
-  font-weight:900;
-  color:#5b1b77;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+font-size:30px;
+
+color:#5b1b77;
+
+font-weight:900;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
+
 
 .numberSmall{
-  font-size:18px;
-  margin-top:4px;
-  color:#222;
-  text-shadow:0 2px 0 rgba(255,255,255,.65);
+
+font-size:18px;
+
+color:#222;
+
+text-shadow:0 2px 0 rgba(255,255,255,.6);
+
 }
 
-/* Mobile tweaks */
-@media (max-width:560px){
 
-  .hero{
-    min-height:70vh;
-    padding-bottom:8px;
-  }
 
-  .logo{
-    width:94%;
-    max-width:640px;
-    margin:0 auto -8px auto;
-  }
+/* MOBILE */
 
-  .servicesTitle{
-    font-size:24px;
-  }
+@media(max-width:560px){
 
-  .serviceGrid{
-    gap:12px;
-  }
+.hero{
 
-  .serviceBox{
-    min-height:120px;
-  }
+min-height:64vh;
+
+}
+
+.logo{
+
+width:96%;
+
+margin:0 auto -4px auto;
+
+}
+
+.serviceBox{
+
+min-height:90px;
+
+}
+
 }
