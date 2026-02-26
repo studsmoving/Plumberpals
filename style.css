@@ -74,7 +74,7 @@ body{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap: 14px;
+  gap:14px;
 
   background: linear-gradient(
     to bottom,
@@ -85,11 +85,12 @@ body{
 
   color:white;
 
-  padding:20px 70px;
+  /* THIS makes it long and skinny */
+  padding:14px 95px;
 
   border-radius:999px;
 
-  font-size:30px;
+  font-size:28px;
   font-weight:900;
 
   text-decoration:none;
@@ -102,7 +103,6 @@ body{
 
   letter-spacing:1px;
 }
-
 .callButtonBig .phone{
   font-size: 26px;
 }
