@@ -1,327 +1,183 @@
-/* FINAL CLEAN VERSION */
+/* Plumber Pals — Background LOCKED top-to-bottom + compact service cards */
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+:root{
+  /* Pick a soft color that matches your bg image (prevents white/black flashes) */
+  --bgSolid: #e9e4dc;
+  --purple: #5b1b77;
+  --gray: #6b6b6b;
 }
 
-/* Full page height */
-html, body{
-height:100%;
+html{
+  height:100%;
+  background-color: var(--bgSolid);
+
+  /* ✅ Put the background on HTML so it never "ends" and never shows white */
+  background-image:
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
+    url("./nola-bg.png");
+
+  /* zoomed out so you see both houses */
+  background-size:120% auto;
+  background-position:center 55%;
+  background-repeat:no-repeat;
+
+  /* helps avoid top/bottom gaps on mobile */
+  background-attachment: scroll;
+
+  /* stops rubber-band showing white/black behind */
+  overscroll-behavior: none;
 }
 
-/* BACKGROUND — FULL TOP TO BOTTOM */
 body{
-
-font-family:Arial, sans-serif;
-text-align:center;
-color:#111;
-
-/* Full background image */
-background:
-linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
-url("./nola-bg.png");
-
-/* Taller background */
-background-size:120% auto;
-
-/* Moves image upward to remove black gap */
-background-position:center 55%;
-
-background-repeat:no-repeat;
-
-/* Makes background fill entire scroll */
-background-attachment:scroll;
-
-min-height:100vh;
-
-overflow-x:hidden;
-
+  min-height:100svh;           /* better than 100vh on mobile */
+  background: transparent;     /* ✅ key: html owns the background */
+  font-family: Arial, sans-serif;
+  text-align:center;
+  color:#111;
+  overflow-x:hidden;
 }
-
-
-/* CONTAINER */
 
 .container{
-
-max-width:820px;
-margin:0 auto;
-
-/* No top padding = removes top gap */
-padding:0 14px 10px;
-
+  max-width:820px;
+  margin:0 auto;
+  padding: 0 14px 18px;        /* no top padding */
 }
-
-
 
 /* HERO */
-
 .hero{
-
-min-height:66vh;
-
-display:flex;
-align-items:flex-end;
-justify-content:center;
-
-padding-bottom:6px;
-
-margin:0;
-
+  min-height:66svh;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom:6px;
 }
-
 
 /* FLOAT */
-
 .logo{
-
-width:94%;
-max-width:640px;
-
-margin:0 auto -6px auto;
-
-height:auto;
-
-filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
-
+  width:94%;
+  max-width:640px;
+  height:auto;
+  display:block;
+  margin:0 auto -6px auto;
+  filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
 
+/* Remove big CTA under float */
+.callButtonBigWrap{ display:none !important; }
 
-/* Remove extra button */
-
-.callButtonBigWrap{
-display:none;
-}
-
-
-
-/* SERVICES SECTION — TRANSPARENT */
-
+/* SERVICES (transparent section; only boxes are white) */
 .services{
-
-background:transparent;
-
-margin-top:6px;
-
-padding:6px 4px;
-
+  background: transparent !important;
+  padding: 6px 4px 0;
 }
-
-
 
 /* Titles */
-
 .servicesTitle{
-
-color:#5b1b77;
-
-font-size:26px;
-
-font-weight:900;
-
-margin-bottom:4px;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  color: var(--purple);
+  font-size:26px;
+  font-weight:900;
+  margin: 6px 0 4px;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
-
 
 .services h3{
-
-color:#6b6b6b;
-
-font-size:18px;
-
-margin-bottom:8px;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  color: var(--gray);
+  font-size:18px;
+  font-weight:700;
+  margin: 0 0 10px;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
 
-
-
-/* GRID */
-
+/* Grid */
 .serviceGrid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:10px;
-
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
 }
 
-
-
-/* SERVICE BOXES — SMALLER RECTANGLES */
-
+/* ✅ Smaller rectangular service cards with shadow */
 .serviceBox{
+  background: rgba(255,255,255,.94);
+  border-radius:12px;
+  padding:10px;
+  min-height:92px;
 
-background:white;
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.14),
+    inset 0 1px 0 rgba(255,255,255,.70);
 
-border-radius:12px;
-
-/* Smaller padding */
-padding:10px;
-
-/* Smaller height */
-min-height:95px;
-
-box-shadow:
-0 6px 16px rgba(0,0,0,.15);
-
-display:flex;
-
-gap:8px;
-
-align-items:flex-start;
-
-text-align:left;
-
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  text-align:left;
 }
 
-
-
-/* ICON */
-
+/* Icon badge smaller */
 .icon{
-
-width:30px;
-height:30px;
-
-flex:0 0 30px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:16px;
-
-border-radius:8px;
-
-background:#f6f6f6;
-
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  border-radius:8px;
+  background: rgba(245,245,245,.95);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
 }
 
-
-
-/* TEXT */
-
+/* Text */
 .serviceText h4{
-
-color:#5b1b77;
-
-font-size:16px;
-
-margin-bottom:2px;
-
-line-height:1.1;
-
+  color: var(--purple);
+  font-size:16px;
+  line-height:1.1;
+  margin:0 0 2px;
+  font-weight:900;
 }
-
 
 .serviceText p{
-
-font-size:13px;
-
-color:#333;
-
-line-height:1.2;
-
+  font-size:13px;
+  line-height:1.2;
+  margin:0;
+  color:#333;
 }
 
-
-
-/* AREAS */
-
-.areas{
-
-margin-top:14px;
-
-}
-
+/* Areas + footer */
+.areas{ margin-top:14px; }
 
 .areas h2{
-
-font-size:26px;
-
-color:#2e2e2e;
-
-margin-bottom:6px;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  font-size:26px;
+  margin:0 0 6px;
+  color:#2e2e2e;
+  font-weight:900;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
-
 
 .areasList{
-
-font-size:16px;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  font-size:16px;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
 
-
-
-/* FOOTER */
-
-.footerCall{
-
-margin-top:10px;
-
-}
-
+.footerCall{ margin-top:10px; }
 
 .numberBig{
-
-font-size:30px;
-
-color:#5b1b77;
-
-font-weight:900;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  font-size:30px;
+  color: var(--purple);
+  font-weight:900;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
-
 
 .numberSmall{
-
-font-size:18px;
-
-color:#222;
-
-text-shadow:0 2px 0 rgba(255,255,255,.6);
-
+  font-size:18px;
+  color:#222;
+  text-shadow:0 2px 0 rgba(255,255,255,.65);
 }
 
-
-
-/* MOBILE */
-
-@media(max-width:560px){
-
-.hero{
-
-min-height:64vh;
-
-}
-
-.logo{
-
-width:96%;
-
-margin:0 auto -4px auto;
-
-}
-
-.serviceBox{
-
-min-height:90px;
-
-}
-
+/* Mobile */
+@media (max-width:560px){
+  .hero{ min-height:64svh; }
+  .logo{ width:96%; margin:0 auto -4px auto; }
+  .serviceBox{ min-height:90px; }
 }
