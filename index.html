@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#e9e4dc">
+
+  <!-- Helps the top browser bar match the site background on mobile -->
+  <meta name="theme-color" content="#e6e1d7">
   <meta name="color-scheme" content="light">
+
   <title>Emergency Plumber New Orleans | Plumber Pals</title>
   <meta name="description" content="Emergency plumber service in New Orleans. Same day / emergency service ready. Call (833) 725-6652 or 833-PAL-NOLA." />
   <link rel="stylesheet" href="style.css" />
@@ -17,7 +20,7 @@
       <img class="logo" src="logo.png" alt="Plumber Pals - Emergency Plumber in New Orleans" />
     </div>
 
-    <!-- ONLY ONE BUTTON (removed the small floatButton) -->
+    <!-- Removed: redundant big button under the float (kept hidden in CSS) -->
     <div class="callButtonBigWrap">
       <a class="callButtonBig" href="tel:+18337256652">
         <span class="phone">📞</span>
@@ -65,13 +68,42 @@
 
       </div>
 
-      <div class="areas">
-        <h2>Serving New Orleans Area</h2>
-        <div class="areasList">
-          New Orleans &nbsp;|&nbsp; Metairie &nbsp;|&nbsp; Kenner &nbsp;|&nbsp; Chalmette &nbsp;|&nbsp; Gretna &nbsp;|&nbsp; Harvey
-        </div>
+      <!-- ✅ NEW: float-style bubbles (replaces the “Serving New Orleans Area” spot) -->
+      <div class="navBubbles">
+        <a class="bubbleBtn" href="#about">About Us</a>
+        <a class="bubbleBtn" href="#reviews">Reviews</a>
+        <a class="bubbleBtn" href="#contact">Contact</a>
       </div>
 
+      <!-- ✅ NEW: BELOW THE FOLD SECTIONS -->
+      <section id="about" class="infoSection">
+        <h2>About Plumber Pals</h2>
+        <p>
+          Fast, friendly emergency plumbing across New Orleans and nearby suburbs.
+          Clear communication, clean work, and same-day service when possible.
+        </p>
+      </section>
+
+      <section id="reviews" class="infoSection">
+        <h2>Reviews</h2>
+        <p>
+          Coming soon: customer reviews and before/after photos.
+          (We’ll link your Google reviews here as soon as your profile is live.)
+        </p>
+      </section>
+
+      <section id="contact" class="infoSection">
+        <h2>Contact</h2>
+
+        <div class="contactCard">
+          <div class="contactLine"><strong>Call:</strong> <a href="tel:+18337256652">(833) 725-6652</a></div>
+          <div class="contactLine"><strong>Text:</strong> <a href="sms:+18337256652">Tap to text</a></div>
+          <div class="contactLine"><strong>Service Area:</strong> New Orleans • Metairie • Kenner • Chalmette • Gretna • Harvey</div>
+          <div class="contactLine"><strong>Hours:</strong> 24/7 Emergency Service</div>
+        </div>
+      </section>
+
+      <!-- Optional: keep the big number at the bottom (remove if you don’t want it) -->
       <div class="footerCall">
         <div class="numberBig">(833) 725-6652</div>
         <div class="numberSmall">833-PAL-NOLA</div>
