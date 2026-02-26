@@ -9,8 +9,9 @@ body{
 
   /* background image + soft white overlay like your goal screenshot */
   background:
-    linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.55)),
-    url("nola-bg.png");
+linear-gradient(rgba(255,255,255,.55),
+rgba(255,255,255,.75)),
+url("./nola-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
