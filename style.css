@@ -1,29 +1,16 @@
-body {
-margin:0;
-font-family:Arial;
-text-align:center;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  text-align:center;
 
-background:
-linear-gradient(rgba(255,255,255,.85),
-rgba(255,255,255,.95)),
-url("./nola-bg.png");
+  background:
+    linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.85)),
+    url("nola-bg.png");
 
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-body {
-margin:0;
-font-family:Arial;
-text-align:center;
-
-background:
-linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.85)),
-url("nola-bg.png");
-
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 
 .hero{
@@ -42,8 +29,8 @@ background-attachment:fixed;
 }
 
 .callButtonSmall{
-  background: #148a19;
-  color: white;
+  background:#148a19;
+  color:#fff;
   padding:14px 28px;
   border-radius:40px;
   font-size:20px;
@@ -58,7 +45,7 @@ background-attachment:fixed;
   display:inline-block;
   margin-top:20px;
   background:#148a19;
-  color:white;
+  color:#fff;
   padding:18px 60px;
   border-radius:50px;
   font-size:28px;
@@ -71,7 +58,7 @@ background-attachment:fixed;
 .services{
   margin-top:20px;
   padding:20px;
-  background:white;
+  background:#fff;
   border-radius:20px;
   margin-left:10px;
   margin-right:10px;
@@ -79,20 +66,20 @@ background-attachment:fixed;
 }
 
 .services h2{
-  color: purple;
+  color:purple;
   font-size:28px;
   margin:0 0 6px 0;
 }
 
 .services h3{
-  color: gray;
+  color:gray;
   margin:0 0 18px 0;
   font-weight:600;
 }
 
 .serviceGrid{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   gap:12px;
 }
 
@@ -104,7 +91,7 @@ background-attachment:fixed;
 }
 
 .serviceBox h4{
-  color: purple;
+  color:purple;
   margin:0 0 6px 0;
   font-size:18px;
 }
@@ -142,7 +129,7 @@ background-attachment:fixed;
 .numberBig{
   font-size:32px;
   font-weight:bold;
-  color: purple;
+  color:purple;
 }
 
 .numberSmall{
@@ -152,9 +139,9 @@ background-attachment:fixed;
 }
 
 /* Mobile tweaks */
-@media (max-width: 520px){
+@media (max-width:520px){
   .serviceGrid{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
   .callButtonBig{
     font-size:24px;
