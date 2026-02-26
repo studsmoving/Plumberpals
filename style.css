@@ -7,15 +7,15 @@ body{
   font-family: Arial, sans-serif;
   text-align:center;
 
-  background:
-  linear-gradient(rgba(255,255,255,.35),
-  rgba(255,255,255,.55)),
-  url("./nola-bg.png");
+ background:
+linear-gradient(rgba(255,255,255,.25),
+rgba(255,255,255,.40)),
+url("./nola-bg.png");
 
-  background-size: 115%;   /* zoom OUT */
-  background-position: center top; /* show both buildings */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+background-size: 120%;
+background-position: center 10%;
+background-repeat: no-repeat;
+background-attachment: fixed;
 
   color:#111;
 }
