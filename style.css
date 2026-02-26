@@ -1,82 +1,197 @@
-/* Plumber Pals - Clean Stable Version */
+/* Plumber Pals - Goal Match (Mobile-first) */
 
-*{
-box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 /* Full screen background */
 html, body{
-height:100%;
-margin:0;
+  height:100%;
+  margin:0;
 }
 
 body{
-font-family:Arial, sans-serif;
-text-align:center;
-color:#111;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  color:#111;
 
-/* Background image */
-background:
-linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
-url("./nola-bg.png");
+  background:
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
+    url("./nola-bg.png");
 
-/* ZOOMED OUT so both houses show */
-background-size:120% auto;
+  /* ZOOMED OUT so both houses show */
+  background-size:120% auto;
 
-/* Centered visually */
-background-position:center 70%;
+  /* framing similar to goal */
+  background-position:center 70%;
 
-background-repeat:no-repeat;
-background-attachment:scroll;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
 }
 
 /* Layout container */
 .container{
-max-width:820px;
-margin:0 auto;
-padding:10px 14px 30px;
+  max-width:820px;
+  margin:0 auto;
+  padding:10px 14px 30px;
 }
 
-/* HERO AREA */
-
+/* HERO */
 .hero{
-
-/* Gives room for float to sit lower */
-min-height:78vh;
-
-display:flex;
-align-items:flex-end;
-justify-content:center;
-
-padding-bottom:20px;
+  min-height:78vh;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom:18px;
 }
 
-/* Float Logo */
-
+/* Float / Logo (slightly bigger) */
 .logo{
-
-width:78%;
-max-width:440px;
-
-display:block;
-
-/* Pull float down toward street */
-margin:0 auto -40px auto;
-
-height:auto;
-
-filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
-
+  width:82%;              /* was ~78% */
+  max-width:480px;        /* was 440 */
+  height:auto;
+  display:block;
+  margin:0 auto -44px auto;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
 
-
-/* REMOVE Big Green Button */
-
+/* Remove redundant big CTA under float */
 .callButtonBigWrap{
-display:none;
+  display:none;
 }
 
-
-/* SERVICES CARD */
-
+/* SERVICES CARD (bring back “card look”) */
 .services{
+  margin-top:6px;
+  padding:18px 16px 18px;
+
+  background: rgba(255,255,255,.90);   /* back to readable white panel */
+  border-radius:22px;
+  box-shadow:0 16px 40px rgba(0,0,0,.18);
+}
+
+/* Title + subtitle colors restored */
+.servicesTitle{
+  color:#5b1b77;           /* PURPLE */
+  font-size:28px;
+  margin:0 0 8px 0;
+  font-weight:900;
+  line-height:1.05;
+  white-space:nowrap;      /* one line like goal */
+}
+
+.services h3{
+  color:#6b6b6b;           /* gray subtitle */
+  margin:0 0 14px 0;
+  font-weight:700;
+  font-size:18px;
+}
+
+/* ✅ FORCE 2x2 GRID (fix ladder issue) */
+.serviceGrid{
+  display:grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap:14px;
+  margin-top:10px;
+}
+
+/* Service boxes (goal-style cards) */
+.serviceBox{
+  background: rgba(255,255,255,.82);
+  border-radius:14px;
+  padding:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.10);
+
+  text-align:left;
+
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+/* Icons */
+.icon{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+  background: rgba(255,255,255,.85);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+}
+
+/* Service text colors restored */
+.serviceText h4{
+  color:#5b1b77;           /* PURPLE headings */
+  margin:0 0 4px 0;
+  font-size:18px;
+  font-weight:900;
+}
+
+.serviceText p{
+  margin:0;
+  color:#333;
+  line-height:1.25;
+  font-size:15px;
+}
+
+/* Areas section */
+.areas{ margin-top:18px; }
+
+.areas h2{
+  font-size:30px;
+  font-weight:900;
+  margin:0 0 10px 0;
+  color:#2e2e2e;
+  text-shadow:0 2px 0 rgba(255,255,255,.6);
+}
+
+.areasList{
+  font-size:18px;
+  color:#1a1a1a;
+  line-height:1.4;
+  padding:0 6px;
+}
+
+/* Footer numbers */
+.footerCall{
+  margin-top:16px;
+  padding:8px 0 0;
+}
+
+.numberBig{
+  font-size:32px;
+  font-weight:900;
+  color:#5b1b77;
+}
+
+.numberSmall{
+  font-size:18px;
+  margin-top:4px;
+  color:#222;
+}
+
+/* Mobile */
+@media (max-width:560px){
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .logo{
+    width:86%;            /* slightly bigger on mobile */
+    max-width:500px;
+    margin:0 auto -52px auto;
+  }
+
+  /* Keep 2 columns like the goal */
+  .serviceGrid{
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .servicesTitle{
+    font-size:24px;
+  }
+}
