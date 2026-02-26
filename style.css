@@ -211,7 +211,12 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 560px){
+@media (max-width: 560px).callButtonBig{
+  min-width: 280px;
+  padding: 14px 64px;
+  font-size: 24px;
+}
+{
   .serviceGrid{ grid-template-columns: 1fr; }
   .callButtonBig{ font-size: 24px; padding: 16px 46px; }
   .services h2{ font-size: 32px; }
