@@ -7,13 +7,13 @@ body{
   font-family: Arial, sans-serif;
   text-align:center;
 
-  /* Full screen background + visible buildings */
+  /* FINAL balanced background */
   background:
-    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.24)),
+    linear-gradient(rgba(255,255,255,.05), rgba(255,255,255,.18)),
     url("./nola-bg.png");
 
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 10%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
