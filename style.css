@@ -30,10 +30,9 @@ url("./nola-bg.png");
 }
 
 .logo{
-  width:90%;
-  max-width:520px;
+  width:75%;
+  max-width:420px;
   height:auto;
-}
   display:block;
   margin: 0 auto;
   filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
