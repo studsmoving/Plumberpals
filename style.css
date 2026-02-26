@@ -211,12 +211,23 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 560px).callButtonBig{
-  min-width: 280px;
-  padding: 14px 64px;
-  font-size: 24px;
+@media (max-width: 560px){
+
+  .serviceGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .callButtonBig{
+    min-width: 300px;
+    padding: 14px 72px;
+    font-size: 24px;
+  }
+
+  .services h2{
+    font-size: 32px;
+  }
+
 }
-{
   .serviceGrid{ grid-template-columns: 1fr; }
   .callButtonBig{ font-size: 24px; padding: 16px 46px; }
   .services h2{ font-size: 32px; }
