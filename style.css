@@ -80,6 +80,10 @@ body{
   position: relative;
 }
 
+.hero a{
+  display:none;
+}
+
 .callButtonBig::after{
   content:"";
   position:absolute;
