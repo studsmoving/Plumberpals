@@ -242,3 +242,13 @@ body{
   .logo{ width:86%; }
   .bubbleBtn{ min-width:104px; padding:10px 12px; font-size:13px; }
 }
+/* Perfect fold spacing */
+
+.navBubbles{
+margin-bottom:35px;
+}
+
+.infoSection{
+margin-top:60px;
+padding-top:10px;
+}
