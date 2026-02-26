@@ -6,15 +6,20 @@ body{
   font-family: Arial, sans-serif;
   text-align:center;
 
-  /* background image + light wash */
   background:
-    linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.34)),
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.20)),
     url("./nola-bg.png");
 
-  /* keep “zoomed out” but still filling */
-  background-size: 90%;
-  background-position: center 10%;
+  /* Fills entire screen perfectly */
+  background-size: cover;
+
+  /* Keeps house centered */
+  background-position: center bottom;
+
+  /* No white gaps */
   background-repeat: no-repeat;
+
+  /* Makes it feel real + deep */
   background-attachment: scroll;
 
   color:#111;
