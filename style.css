@@ -1,13 +1,11 @@
 /* =========================================================
-   Plumber Pals - FINAL (pixel-tight mobile-first)
-   Files expected in SAME folder as index.html:
-   - style.css
+   Plumber Pals - FINAL (compact 4-grid + better background)
+   Expects:
    - logo.png
    - nola-bg.png
    ========================================================= */
 
 *{ box-sizing:border-box; }
-
 :root{
   --purple:#5b1b77;
   --gold:#d9b200;
@@ -24,75 +22,70 @@ body{
   text-align:center;
   color:#111;
 
-  /* Background: show the houses clearly + “zoomed out” feel */
+  /* Fill screen (cover) + less white wash so building shows */
   background-image:
-    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.28)),
+    linear-gradient(rgba(255,255,255,.05), rgba(255,255,255,.18)),
     url("./nola-bg.png");
-  background-repeat: no-repeat;
-  background-position: center 12%;
-  background-size: cover;              /* fills screen */
-  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size:cover;                /* ALWAYS fills */
+  background-position:center 10%;       /* move building into view */
+  background-attachment:scroll;         /* mobile-friendly (fixed often glitches) */
 }
 
 .container{
   max-width: 820px;
   margin: 0 auto;
-  padding: 16px 14px 30px;
+  padding: 10px 12px 18px;
 }
 
 /* HERO */
-.hero{ padding-top: 6px; }
+.hero{ padding-top: 4px; }
 
 .logo{
-  width: 78%;                /* smaller like goal */
-  max-width: 440px;
+  width: 72%;               /* smaller so 4 services fit */
+  max-width: 420px;
   height:auto;
   display:block;
   margin: 0 auto;
-  filter: drop-shadow(0 10px 25px rgba(0,0,0,.18));
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.16));
 }
 
-/* REMOVE the extra “float” button area (keep only the printed button inside the image) */
+/* Remove float button (we only keep the big button) */
 .floatButton{ display:none; }
 
-/* BIG CALL BUTTON (regal / gold / slim) */
-.callButtonBigWrap{
-  margin: 10px 0 18px;
-}
+/* BIG CALL BUTTON */
+.callButtonBigWrap{ margin: 8px 0 10px; }
 
 .callButtonBig{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap: 12px;
+  gap: 10px;
 
-  min-width: 330px;
-  padding: 13px 84px;        /* slimmer + longer */
+  min-width: 320px;
+  padding: 12px 78px;          /* slimmer + longer */
   border-radius: 999px;
 
   background: linear-gradient(var(--green1), var(--green2));
-  color: var(--gold2);       /* gold text */
-  font-size: 26px;
+  color: var(--gold2);         /* gold text */
+  font-size: 24px;
   font-weight: 900;
-  letter-spacing: .5px;
+  letter-spacing:.5px;
   text-decoration:none;
 
   border: 4px solid var(--gold);
   box-shadow:
-    0 14px 26px rgba(0,0,0,.22),
+    0 12px 22px rgba(0,0,0,.20),
     inset 0 2px 0 rgba(255,255,255,.35),
     inset 0 -3px 0 rgba(0,0,0,.18);
-
-  position: relative;
+  position:relative;
   overflow:hidden;
 }
 
 .callButtonBig::after{
   content:"";
   position:absolute;
-  top:6px;
-  left:10px;
-  right:10px;
+  top:6px; left:10px; right:10px;
   height:45%;
   border-radius:999px;
   background: linear-gradient(rgba(255,255,255,.28), rgba(255,255,255,0));
@@ -100,131 +93,121 @@ body{
 }
 
 .callButtonBig .phone{
-  font-size: 24px;
-  color: var(--gold2);
+  width:22px;
+  height:22px;
+  display:inline-block;
   filter: drop-shadow(0 2px 0 rgba(0,0,0,.22));
 }
 
-/* SERVICES CARD */
+/* SERVICES CARD (compact so 4 boxes fit without scrolling) */
 .services{
   margin-top: 6px;
-  padding: 22px 16px 18px;
-  background: rgba(255,255,255,.90);
-  border-radius: 22px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  padding: 14px 12px 12px;
+  background: rgba(255,255,255,.88);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.16);
 }
 
 .services h2{
   color: var(--purple);
-  font-size: 34px;
-  margin: 0 0 8px 0;
+  font-size: 28px;
+  margin: 0 0 6px 0;
   font-weight: 900;
   line-height: 1.05;
 }
 
 .services h3{
-  color: #6b6b6b;
-  margin: 0 0 16px 0;
+  color:#6b6b6b;
+  margin: 0 0 10px 0;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
 }
 
-/* GRID = 2 columns on mobile like goal */
+/* Keep 2x2 grid on phones */
 .serviceGrid{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .serviceBox{
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.84);
   border-radius: 14px;
-  padding: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+  padding: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.09);
   text-align:left;
   display:flex;
-  gap: 12px;
+  gap: 10px;
   align-items:flex-start;
+  min-height: 92px;           /* keeps boxes consistent */
 }
 
 .icon{
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.92);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius: 12px;
-  background: rgba(255,255,255,.85);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
 }
+
+.icon svg{ width:28px; height:28px; display:block; }
 
 .serviceText h4{
   color: var(--purple);
   margin: 0 0 4px 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
 }
 
 .serviceText p{
   margin: 0;
-  color: #333;
-  line-height: 1.25;
-  font-size: 15px;
+  color:#333;
+  line-height: 1.18;
+  font-size: 13px;
 }
 
-/* AREAS */
-.areas{ margin-top: 18px; }
+/* Areas + footer */
+.areas{ margin-top: 12px; }
 
 .areas h2{
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 900;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   color:#2e2e2e;
-  text-shadow: 0 2px 0 rgba(255,255,255,.6);
 }
 
 .areasList{
-  font-size: 20px;
+  font-size: 18px;
   color:#1a1a1a;
-  line-height: 1.4;
-  padding: 0 6px;
+  line-height: 1.35;
+  padding: 0 4px;
 }
 
 .footerCall{
-  margin-top: 16px;
-  padding: 8px 0 0;
+  margin-top: 10px;
+  padding: 6px 0 0;
 }
 
 .numberBig{
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 900;
   color: var(--purple);
 }
 
 .numberSmall{
-  font-size: 20px;
-  margin-top: 4px;
+  font-size: 18px;
+  margin-top: 2px;
   color:#222;
 }
 
-/* Responsive tweaks */
-@media (max-width: 560px){
-  /* keep 2-col grid on most phones; only go 1-col on very small screens */
-  .callButtonBig{
-    min-width: 300px;
-    padding: 13px 72px;
-    font-size: 24px;
-  }
-  .services h2{ font-size: 32px; }
-}
-
+/* Small phones: only then stack to 1 column */
 @media (max-width: 380px){
+  .logo{ width: 78%; }
+  .callButtonBig{ min-width: 270px; padding: 12px 56px; font-size: 22px; }
   .serviceGrid{ grid-template-columns: 1fr; }
-  .callButtonBig{
-    min-width: 270px;
-    padding: 12px 56px;
-    font-size: 22px;
-  }
 }
