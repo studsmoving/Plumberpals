@@ -30,6 +30,68 @@ content="NOLA Plumber Pals LLC provides emergency plumbing and same day plumbing
 
 <link rel="stylesheet" href="style.css" />
 
+<style>
+  .hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo{
+    display: block;
+    width: min(94vw, 640px);
+    height: auto;
+  }
+
+  /* hide the separate visible button so only the float button is used */
+  .callButtonBigWrap{
+    display: none !important;
+  }
+
+  /* clickable hotspot over the phone number area */
+  .heroPhoneHotspot{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 22.2%;
+    width: 49%;
+    height: 10%;
+    z-index: 50;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 24px;
+  }
+
+  /* clickable hotspot over the CALL NOW area */
+  .heroCallHotspot{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8.3%;
+    width: 37%;
+    height: 11%;
+    z-index: 51;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 999px;
+  }
+
+  @media (max-width: 768px){
+    .heroPhoneHotspot{
+      bottom: 22.4%;
+      width: 50%;
+      height: 10.2%;
+    }
+
+    .heroCallHotspot{
+      bottom: 8.5%;
+      width: 38%;
+      height: 11.2%;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -54,7 +116,25 @@ Plumber Harvey
 </div>
 
 <div class="hero">
-  <img class="logo" src="logo.png" alt="NOLA Plumber Pals LLC emergency plumber in New Orleans Louisiana leak repair drain cleaning water heater repair" />
+  <img
+    class="logo"
+    src="logo.png"
+    alt="NOLA Plumber Pals LLC emergency plumber in New Orleans Louisiana leak repair drain cleaning water heater repair"
+  />
+
+  <!-- clickable area over the written phone number -->
+  <a
+    class="heroPhoneHotspot"
+    href="tel:+18337256652"
+    aria-label="Call NOLA Plumber Pals at 833-725-6652"
+  ></a>
+
+  <!-- clickable area over the CALL NOW button in the float -->
+  <a
+    class="heroCallHotspot"
+    href="tel:+18337256652"
+    aria-label="Call NOLA Plumber Pals now"
+  ></a>
 </div>
 
 <h1 style="display:none;">
