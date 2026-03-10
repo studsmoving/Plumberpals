@@ -252,3 +252,8 @@ margin-bottom:35px;
 margin-top:60px;
 padding-top:10px;
 }
+
+.infoSection p {
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
