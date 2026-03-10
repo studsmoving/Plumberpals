@@ -1,13 +1,15 @@
 /* Plumber Pals — final layout + float-style nav bubbles */
 
-*{ box-sizing:border-box; margin:0; padding:0; }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 :root{
   --purple:#5b1b77;
   --gray:#666;
   --bgSolid:#e6e1d7;
-
-  /* Bubble button colors to match your float CTA vibe */
   --bubbleGreen1:#1aa02a;
   --bubbleGreen2:#0f7a16;
   --bubbleGold:#f7cf4a;
@@ -17,11 +19,9 @@
 html{
   height:100%;
   background-color:var(--bgSolid);
-
   background-image:
     linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.15)),
     url("./nola-bg.png");
-
   background-size:100% auto;
   background-position:center top;
   background-repeat:no-repeat;
@@ -62,7 +62,9 @@ body{
 }
 
 /* Remove extra button under float */
-.callButtonBigWrap{ display:none !important; }
+.callButtonBigWrap{
+  display:none !important;
+}
 
 /* Services transparent */
 .services{
@@ -100,7 +102,6 @@ body{
   padding:8px 8px;
   min-height:68px;
   box-shadow:0 6px 14px rgba(0,0,0,.15);
-
   display:flex;
   gap:7px;
   text-align:left;
@@ -133,9 +134,9 @@ body{
   color:#333;
 }
 
-/* ✅ FLOAT-STYLE NAV BUBBLES (About / Reviews / Contact) */
+/* FLOAT-STYLE NAV BUBBLES */
 .navBubbles{
-  margin:12px auto 6px;
+  margin:12px auto 35px;
   display:flex;
   gap:10px;
   justify-content:center;
@@ -146,24 +147,17 @@ body{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
-  /* Same pill look as float CTA */
   padding:10px 14px;
   min-width:110px;
   height:44px;
-
   border-radius:999px;
-
-  background: linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
-  color: var(--bubbleGold);
-
+  background:linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
+  color:var(--bubbleGold);
   font-weight:900;
   font-size:14px;
   text-decoration:none;
   letter-spacing:.3px;
-
   border:3px solid var(--bubbleBorder);
-
   box-shadow:
     0 10px 18px rgba(0,0,0,.18),
     inset 0 2px 0 rgba(255,255,255,.30),
@@ -171,14 +165,14 @@ body{
 }
 
 .bubbleBtn:active{
-  transform: translateY(1px);
+  transform:translateY(1px);
 }
 
-/* Info sections (below the fold) */
+/* Info sections */
 .infoSection{
-  margin:18px auto 0;
+  margin:60px auto 0;
   text-align:left;
-  padding:0 2px;
+  padding:10px 2px 0;
 }
 
 .infoSection h2{
@@ -190,15 +184,16 @@ body{
 
 .infoSection p{
   font-size:15px;
-  line-height:1.4;
+  line-height:1.65;
   color:#222;
   text-shadow:0 2px 0 rgba(255,255,255,.45);
+  margin-bottom:20px;
 }
 
 /* Contact card */
 .contactCard{
   margin-top:10px;
-  background: rgba(255,255,255,.92);
+  background:rgba(255,255,255,.92);
   border-radius:12px;
   padding:12px;
   box-shadow:0 8px 18px rgba(0,0,0,.14);
@@ -220,7 +215,7 @@ body{
   text-decoration:none;
 }
 
-/* Footer numbers (optional – keep if you want) */
+/* Footer numbers */
 .footerCall{
   margin-top:14px;
 }
@@ -239,21 +234,13 @@ body{
 
 /* Mobile */
 @media(max-width:560px){
-  .logo{ width:86%; }
-  .bubbleBtn{ min-width:104px; padding:10px 12px; font-size:13px; }
-}
-/* Perfect fold spacing */
+  .logo{
+    width:86%;
+  }
 
-.navBubbles{
-margin-bottom:35px;
-}
-
-.infoSection{
-margin-top:60px;
-padding-top:10px;
-}
-
-.infoSection p {
-  margin-bottom: 20px;
-  line-height: 1.65;
+  .bubbleBtn{
+    min-width:104px;
+    padding:10px 12px;
+    font-size:13px;
+  }
 }
