@@ -176,18 +176,22 @@ body{
 }
 
 .infoSection h2{
-  font-size:22px;
+  font-size:26px;
   color:#2e2e2e;
-  margin:0 0 8px;
+  margin:0 0 10px;
   text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
 .infoSection p{
-  font-size:15px;
-  line-height:1.65;
+  font-size:17px;
+  line-height:1.7;
   color:#222;
   text-shadow:0 2px 0 rgba(255,255,255,.45);
-  margin-bottom:20px;
+  margin-bottom:22px;
+}
+
+.infoSection p strong{
+  font-size:18px;
 }
 
 /* Contact card */
@@ -200,8 +204,8 @@ body{
 }
 
 .contactLine{
-  font-size:15px;
-  padding:6px 0;
+  font-size:17px;
+  padding:8px 0;
   border-bottom:1px solid rgba(0,0,0,.06);
 }
 
@@ -221,18 +225,18 @@ body{
 }
 
 .numberBig{
-  font-size:28px;
+  font-size:32px;
   font-weight:900;
   color:var(--purple);
   text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
 .numberSmall{
-  font-size:16px;
+  font-size:18px;
   text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
-/* Mobile */
+/* Mobile-only readability boost */
 @media(max-width:560px){
   .logo{
     width:86%;
@@ -242,5 +246,31 @@ body{
     min-width:104px;
     padding:10px 12px;
     font-size:13px;
+  }
+
+  .infoSection h2{
+    font-size:29px;
+  }
+
+  .infoSection p{
+    font-size:19px;
+    line-height:1.75;
+    margin-bottom:24px;
+  }
+
+  .infoSection p strong{
+    font-size:20px;
+  }
+
+  .contactLine{
+    font-size:18px;
+  }
+
+  .numberBig{
+    font-size:36px;
+  }
+
+  .numberSmall{
+    font-size:20px;
   }
 }
