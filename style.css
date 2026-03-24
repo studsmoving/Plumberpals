@@ -274,3 +274,51 @@ body{
     font-size:20px;
   }
 }
+.review-box {
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.review-badge {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 6px #fbbc04, 0 6px 18px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-stars {
+  font-size: 26px;
+  color: #fbbc04;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.review-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4285F4;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.review-button:hover {
+  background: #3367d6;
+}
+
+.review-subtext {
+  font-size: 13px;
+  color: #777;
+  margin-top: 8px;
+}
