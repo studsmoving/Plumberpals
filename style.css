@@ -260,36 +260,29 @@ body{
   text-decoration:none;
 }
 
-/* ✅ STICKY CALL BUTTON — SMALL FLOATING VERSION */
-.stickyCallBar{
-  display:none;
-}
-
 @media (max-width:768px){
 
   .stickyCallBar{
     position:fixed;
-    left:0;
-    right:0;
     bottom:12px;
+    left:0;
+    width:100%;
     z-index:9999;
-    display:block;
-    text-align:center;
+    display:flex;
+    justify-content:center; /* ✅ TRUE CENTERING */
     pointer-events:none;
   }
 
   .stickyCallBar a{
     display:inline-block;
-    min-width:220px;
-    max-width:280px;
-    width:auto;
+    min-width:180px;
+    max-width:240px;
     text-align:center;
     background:linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
     color:var(--bubbleGold);
     font-weight:900;
-    font-size:16px;
-    line-height:1;
-    padding:12px 28px;
+    font-size:15px;
+    padding:10px 24px;
     border-radius:999px;
     border:3px solid var(--bubbleBorder);
     text-decoration:none;
