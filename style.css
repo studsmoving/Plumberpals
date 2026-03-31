@@ -1,4 +1,4 @@
-/* Plumber Pals — final layout + float-style nav bubbles */
+/* Plumber Pals — clean final version */
 
 *{
   box-sizing:border-box;
@@ -16,6 +16,7 @@
   --bubbleBorder:#d9b200;
 }
 
+/* Background */
 html{
   height:100%;
   background-color:var(--bgSolid);
@@ -36,6 +37,7 @@ body{
   overflow-x:hidden;
 }
 
+/* Layout */
 .container{
   max-width:820px;
   margin:0 auto;
@@ -48,31 +50,26 @@ body{
   display:flex;
   align-items:flex-end;
   justify-content:center;
-  padding:0;
 }
 
-/* FLOAT */
 .logo{
   width:82%;
   max-width:520px;
-  height:auto;
   display:block;
   margin:0 auto;
   filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
 }
 
-/* Remove extra button under float */
 .callButtonBigWrap{
   display:none !important;
 }
 
-/* Services transparent */
+/* Services */
 .services{
   background:transparent;
   padding:6px 2px 0;
 }
 
-/* Titles */
 .servicesTitle{
   color:var(--purple);
   font-size:24px;
@@ -88,30 +85,27 @@ body{
   text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
-/* GRID */
+/* Grid */
 .serviceGrid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:8px;
 }
 
-/* Smaller rectangles */
 .serviceBox{
   background:#fff;
   border-radius:10px;
-  padding:8px 8px;
+  padding:8px;
   min-height:68px;
   box-shadow:0 6px 14px rgba(0,0,0,.15);
   display:flex;
   gap:7px;
   text-align:left;
-  align-items:flex-start;
 }
 
 .icon{
   width:24px;
   height:24px;
-  flex:0 0 24px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -123,24 +117,21 @@ body{
 .serviceText h4{
   color:var(--purple);
   font-size:14px;
-  margin-bottom:2px;
-  line-height:1.1;
   font-weight:900;
+  margin-bottom:2px;
 }
 
 .serviceText p{
   font-size:12px;
-  line-height:1.15;
   color:#333;
 }
 
-/* FLOAT-STYLE NAV BUBBLES */
+/* Buttons */
 .navBubbles{
   margin:12px auto 35px;
   display:flex;
   gap:10px;
   justify-content:center;
-  flex-wrap:nowrap;
 }
 
 .bubbleBtn{
@@ -156,7 +147,6 @@ body{
   font-weight:900;
   font-size:14px;
   text-decoration:none;
-  letter-spacing:.3px;
   border:3px solid var(--bubbleBorder);
   box-shadow:
     0 10px 18px rgba(0,0,0,.18),
@@ -164,11 +154,7 @@ body{
     inset 0 -2px 0 rgba(0,0,0,.15);
 }
 
-.bubbleBtn:active{
-  transform:translateY(1px);
-}
-
-/* Info sections */
+/* Sections */
 .infoSection{
   margin:60px auto 0;
   text-align:left;
@@ -177,27 +163,19 @@ body{
 
 .infoSection h2{
   font-size:26px;
-  color:#2e2e2e;
-  margin:0 0 10px;
-  text-shadow:0 2px 0 rgba(255,255,255,.6);
+  margin-bottom:10px;
 }
 
 .infoSection p{
   font-size:17px;
   line-height:1.7;
-  color:#222;
-  text-shadow:0 2px 0 rgba(255,255,255,.45);
   margin-bottom:22px;
 }
 
-.infoSection p strong{
-  font-size:18px;
-}
-
-/* Contact card */
+/* Contact */
 .contactCard{
   margin-top:10px;
-  background:rgba(255,255,255,.92);
+  background:#fff;
   border-radius:12px;
   padding:12px;
   box-shadow:0 8px 18px rgba(0,0,0,.14);
@@ -210,16 +188,15 @@ body{
 }
 
 .contactLine:last-child{
-  border-bottom:none;
+  border:none;
 }
 
 .contactCard a{
   color:var(--purple);
   font-weight:900;
-  text-decoration:none;
 }
 
-/* Footer numbers */
+/* Footer */
 .footerCall{
   margin-top:14px;
 }
@@ -228,208 +205,90 @@ body{
   font-size:32px;
   font-weight:900;
   color:var(--purple);
-  text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
 .numberSmall{
   font-size:18px;
-  text-shadow:0 2px 0 rgba(255,255,255,.6);
 }
 
-/* Mobile-only readability boost */
-@media(max-width:560px){
-  .logo{
-    width:86%;
+/* Reviews */
+.review-box{
+  position:relative;
+  background:linear-gradient(135deg,#fff,#f7f7f7);
+  border-radius:16px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.review-box::before{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,rgba(251,188,4,0.08),transparent 65%);
+}
+
+.review-box *{
+  position:relative;
+}
+
+.review-badge{
+  width:100px;
+  height:100px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 0 6px #fbbc04, 0 6px 18px rgba(0,0,0,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.review-stars{
+  font-size:26px;
+  color:#fbbc04;
+}
+
+.review-button{
+  padding:12px 24px;
+  background:#4285F4;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* ✅ STICKY CALL BAR (SAFE + CLEAN) */
+.stickyCallBar{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .stickyCallBar{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:10px;
+    z-index:9999;
+    display:block;
   }
 
-  .bubbleBtn{
-    min-width:104px;
-    padding:10px 12px;
-    font-size:13px;
+  .stickyCallBar a{
+    display:block;
+    text-align:center;
+    background:linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
+    color:var(--bubbleGold);
+    font-weight:900;
+    padding:12px;
+    border-radius:999px;
+    border:3px solid var(--bubbleBorder);
+    text-decoration:none;
   }
 
-  .infoSection h2{
-    font-size:29px;
+  body{
+    padding-bottom:80px;
   }
-
-  .infoSection p{
-    font-size:19px;
-    line-height:1.75;
-    margin-bottom:24px;
-  }
-
-  .infoSection p strong{
-    font-size:20px;
-  }
-
-  .contactLine{
-    font-size:18px;
-  }
-
-  .numberBig{
-    font-size:36px;
-  }
-
-  .numberSmall{
-    font-size:20px;
-  }
-
-.review-box {
-  background: linear-gradient(135deg, #ffffff, #f7f7f7);
-  border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.review-badge {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 0 6px #fbbc04, 0 6px 18px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.review-stars {
-  font-size: 26px;
-  color: #fbbc04;
-  letter-spacing: 3px;
-  margin-bottom: 6px;
-}
-
-.review-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #4285F4;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.review-button:hover {
-  background: #3367d6;
-}
-
-.review-subtext {
-  font-size: 13px;
-  color: #777;
-  margin-top: 8px;
-} 
-
-.review-box {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ffffff, #f7f7f7);
-  border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.review-box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(251,188,4,0.15), transparent 60%);
-  z-index: 0;
-}
-
-.review-box {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ffffff, #f7f7f7);
-  border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.review-box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(251,188,4,0.08), transparent 65%);
-  z-index: 0;
-}
-
-.review-box {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ffffff, #f7f7f7);
-  border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.review-box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(251,188,4,0.08), transparent 65%);
-  z-index: 0;
-}
-
-.review-box * {
-  position: relative;
-  z-index: 1;
-}
-
-.review-badge {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 6px #fbbc04, 0 6px 18px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.review-stars {
-  font-size: 26px;
-  color: #fbbc04;
-  letter-spacing: 3px;
-  margin-bottom: 2px; /* tightened spacing */
-}
-
-.review-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #4285F4;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  box-shadow: 0 4px 12px rgba(66,133,244,0.3); /* added */
-}
-
-.review-button:hover {
-  background: #3367d6;
-}
-
-.review-subtext {
-  font-size: 13px;
-  color: #777;
-  margin-top: 8px;
 }
