@@ -260,7 +260,7 @@ body{
   text-decoration:none;
 }
 
-/* ✅ FIXED STICKY BAR (MATCHES YOUR BUTTON STYLE) */
+/* ✅ STICKY CALL BAR — FORCED NARROW VERSION */
 .stickyCallBar{
   display:none;
 }
@@ -269,21 +269,24 @@ body{
 
   .stickyCallBar{
     position:fixed;
+    bottom:12px;
     left:50%;
     transform:translateX(-50%);
-    bottom:12px;
     z-index:9999;
     display:block;
-    width:90%;
-    max-width:420px;
+    width:min(420px, calc(100vw - 32px));
+    max-width:calc(100vw - 32px);
   }
 
   .stickyCallBar a{
     display:block;
+    width:100%;
     text-align:center;
     background:linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
     color:var(--bubbleGold);
     font-weight:900;
+    font-size:16px;
+    line-height:1;
     padding:12px 0;
     border-radius:999px;
     border:3px solid var(--bubbleBorder);
@@ -295,6 +298,6 @@ body{
   }
 
   body{
-    padding-bottom:85px;
+    padding-bottom:88px;
   }
 }
