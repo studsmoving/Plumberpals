@@ -260,7 +260,7 @@ body{
   text-decoration:none;
 }
 
-/* ✅ STICKY CALL BAR (SAFE + CLEAN) */
+/* ✅ FIXED STICKY BAR (MATCHES YOUR BUTTON STYLE) */
 .stickyCallBar{
   display:none;
 }
@@ -269,11 +269,13 @@ body{
 
   .stickyCallBar{
     position:fixed;
-    left:12px;
-    right:12px;
-    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:12px;
     z-index:9999;
     display:block;
+    width:90%;
+    max-width:420px;
   }
 
   .stickyCallBar a{
@@ -282,13 +284,17 @@ body{
     background:linear-gradient(var(--bubbleGreen1), var(--bubbleGreen2));
     color:var(--bubbleGold);
     font-weight:900;
-    padding:12px;
+    padding:12px 0;
     border-radius:999px;
     border:3px solid var(--bubbleBorder);
     text-decoration:none;
+    box-shadow:
+      0 10px 18px rgba(0,0,0,.18),
+      inset 0 2px 0 rgba(255,255,255,.30),
+      inset 0 -2px 0 rgba(0,0,0,.15);
   }
 
   body{
-    padding-bottom:80px;
+    padding-bottom:85px;
   }
 }
